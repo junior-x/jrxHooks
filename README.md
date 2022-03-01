@@ -8,7 +8,7 @@ React Native CLI App
  
  <p align="center"><em>Simple vote rate with expansive cards using React-Native CLI.</p>
 
- ![App Preview](/assets/print/01.jpg)
+ ![App Preview](/assets/print/02.jpg)
 
 
 <p align="center"><em>Links para o SITE && PROJETO </p>
@@ -35,8 +35,8 @@ React Native CLI App
  ![App Preview](/assets/print/01.jpg)
 
 ----
-<!-- 
- ![App Preview](/assets/print/03.PNG)
+
+ ![App Preview](/assets/print/02.jpg)
 
 ----
- -->
+
