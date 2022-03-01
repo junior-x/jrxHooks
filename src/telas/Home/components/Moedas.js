@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Text, FlatList, StyleSheet } from "react-native";
 import { carregaMoedas } from "../../../servicos/carregaDados";
+import Moeda from "./Moeda";
 
 export default function  Moedas() {
 
@@ -23,7 +24,7 @@ export default function  Moedas() {
             <FlatList
                 data={lista}
                 keyExtractor={({nome}) => nome }
-                renderItem={({item: { nome }}) => <Text>{ nome }</Text>}
+                renderItem={({ item }) => <Moeda { ...item } /> }
                 ListHeaderComponent={ TopoLista }
             />
         </>
