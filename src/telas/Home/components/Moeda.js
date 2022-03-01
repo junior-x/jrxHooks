@@ -1,16 +1,30 @@
-import React from "react";
-import { View, Text, Image, StyleSheet }  from "react-native";
+import React, { useState } from "react";
+import { View, Text, Image, StyleSheet, TouchableOpacity }  from "react-native";
+import Estrelas from "./../../../components/Estrelas";
 
 export default function Moeda({ nome, imagem, status, estrelas}) {
+
+    const [selecionado, setSelecionado] = useState(false);
+
     return(
         <>
-            <View style={estilos.card}>
+            <TouchableOpacity 
+                style={estilos.card}
+                onPress={() => setSelecionado(!selecionado)}
+            >
                 <Image source={ imagem } style={estilos.logo} accessibilityLabel={ nome } />
                 <View style={estilos.info}>
-                    <Text style={estilos.nome} >{ nome }</Text>
+                    <View>
+                        <Text style={estilos.nome} >{ nome }</Text>
+                        <Estrelas 
+                            quantidade={ estrelas } 
+                            editavel={  selecionado } 
+                            grande={ selecionado }
+                        />
+                    </View>
                     <Text style={estilos.valor} >{ status }</Text>
                 </View>
-            </View>
+            </TouchableOpacity>
         </>
     );
 };
@@ -23,7 +37,7 @@ const estilos = StyleSheet.create({
         marginHorizontal: 16,
         borderRadius: 15,
         /// Android
-        elevation: 6,
+        elevation: 9,
         /// IOs
         shadowColor: "#000",
         shadowOffset: {
