@@ -1,16 +1,28 @@
-import React, { useState } from "react";
+import React, { useReducer, useMemo } from "react";
 import { View, Text, Image, StyleSheet, TouchableOpacity }  from "react-native";
 import Estrelas from "./../../../components/Estrelas";
 
+const statusEmTexto = (status) => {
+    return `${status} US$`;
+}
+
 export default function Moeda({ nome, imagem, status, estrelas}) {
 
-    const [selecionado, setSelecionado] = useState(false);
+    const [selecionado, inverterSelecionado] = useReducer(
+        (selecionado) => !selecionado,
+        false
+    );
+
+    const statusTexto = useMemo(
+        () => statusEmTexto(status),
+        [status]
+    );
 
     return(
         <>
             <TouchableOpacity 
                 style={estilos.card}
-                onPress={() => setSelecionado(!selecionado)}
+                onPress={inverterSelecionado}
             >
                 <Image source={ imagem } style={estilos.logo} accessibilityLabel={ nome } />
                 <View style={estilos.info}>
@@ -22,7 +34,7 @@ export default function Moeda({ nome, imagem, status, estrelas}) {
                             grande={ selecionado }
                         />
                     </View>
-                    <Text style={estilos.valor} >{ status }</Text>
+                    <Text style={estilos.valor} >{ statusTexto }</Text>
                 </View>
             </TouchableOpacity>
         </>

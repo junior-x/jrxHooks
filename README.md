@@ -8,7 +8,7 @@ React Native CLI App
  
  <p align="center"><em>Simple vote rate with expansive cards using React-Native CLI.</p>
 
- ![App Preview](/assets/print/04.jpg)
+ ![App Preview](/assets/print/05.jpg)
 
 
 <p align="center"><em>Links para o SITE && PROJETO </p>
@@ -49,6 +49,11 @@ React Native CLI App
 <p align="center" float="left"> Implementação da votação com um valor random a cada retorno do usuário junto com a alternância de estado do card para torna-lo editável usando o Hook useState. </p>
 
  ![App Preview](/assets/print/04.jpg)
+
+----
+<p align="center" float="left"> Ampliamento de performance para experiência do usuário com useMemo passando os elementos necessários em atualização e crianção de HOOK personalizados. </p>
+
+ ![App Preview](/assets/print/05.jpg)
 
 ----
 

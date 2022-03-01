@@ -14,31 +14,31 @@ const Moedas = {
         {
             nome: "Bitcoin (BTC)",
             imagem: bitcoin,
-            status: `${gerarNumeroAleatorio(1, 5000)} US$`,
+            status: gerarNumeroAleatorio(1, 5000),
             estrelas: gerarNumeroAleatorio(1, 5),
         },
         {
             nome: "Ethereum (ETH)",
             imagem: ethereum,
-            status: `${gerarNumeroAleatorio(1, 5000)} US$`,
+            status: gerarNumeroAleatorio(1, 5000),
             estrelas: gerarNumeroAleatorio(1, 5),
         },
         {
             nome: "Litecoin (LTC)",
             imagem: litecoin,
-            status: `${gerarNumeroAleatorio(1, 5000)} US$`,
+            status: gerarNumeroAleatorio(1, 5000),
             estrelas: gerarNumeroAleatorio(1, 5),
         },
         {
             nome: "Ripple (XRP)",
             imagem: ripple,
-            status: `${gerarNumeroAleatorio(1, 5000)} US$`,
+            status: gerarNumeroAleatorio(1, 5000),
             estrelas: gerarNumeroAleatorio(1, 5),
         },
         {
             nome: "Binance coin (BNB)",
             imagem: binance,
-            status: `${gerarNumeroAleatorio(1, 5000)} US$`,
+            status: gerarNumeroAleatorio(1, 5000),
             estrelas: gerarNumeroAleatorio(1, 5),
         }
     ]

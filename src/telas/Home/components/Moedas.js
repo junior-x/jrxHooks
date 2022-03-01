@@ -1,22 +1,19 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Text, FlatList, StyleSheet } from "react-native";
-import { carregaMoedas } from "../../../servicos/carregaDados";
+import useMoedas from "../../../hooks/useMoedas";
 import Moeda from "./Moeda";
 
-export default function  Moedas() {
+export default function  Moedas( {topo: Topo}) {
 
-    const [titulo, setTitulo ] = useState('');
-    const [lista, setLista ] = useState([]);
-
-    useEffect(() => {
-        const retorno = carregaMoedas();
-        
-        setTitulo(retorno.titulo);
-        setLista(retorno.lista)
-    }, []);
+    const[titulo, lista] = useMoedas();
 
     const TopoLista = () => {
-        return(<Text style={ estilos.titulo }>{ titulo }</Text>)
+        return(
+            <>
+                <Topo />
+                <Text style={ estilos.titulo }>{ titulo }</Text>
+            </>
+        )
     }
 
     return(
